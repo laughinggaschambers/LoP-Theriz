@@ -1,0 +1,9 @@
+{
+  "type": "content",
+  "modid": "therizinosauridae",
+  "name": "Legacy of the Phanerozoic: Scythe Claws",
+  "authors": [ "laughinggas" ],
+  "description": "Adds the family of therizinosaurids dinosaurs to Vintage Story",
+  "version": "1.0.0",
+  "side": "Universal"
+}

@@ -1,0 +1,73 @@
+[
+  {
+    "side": "Server",
+    "dependsOn": [{ "modid": "combatoverhaul" }],
+    "file": "therizinosauridae:entities/land/therizinosauridae",
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": {
+      "code": "CombatOverhaul:EntityColliders",
+      "elements": {
+        "Torso": ["Neck","Neck2","Neck3", "Torso", "Body", "Body Back", "Tail", "Tail2","Tail3"],
+        "Head": ["Head","Head2","Head3","Head4","Head5","Head6","Head8","Head9","Head10","Head12", "Jaw","Jaw2","Jaw Line","Lower Jaw","Lower Jaw2", "Nose", "Slope","Beak","Beak3"],
+        "Arm": ["ArmR","ArmL","ArmR2","ArmL2"],
+        "Leg": ["LegL","LegR","LegL2","LegR2","LegL3","LegR3"],
+        "Critical": ["EyeL", "EyeR","Heart","Brain","Lungs"],
+        "Resistant": []
+      },
+      "defaultPenetrationResistance": 3,
+    }
+  },
+  {
+    "side": "Server",
+    "dependsOn": [{ "modid": "combatoverhaul" }],
+    "file": "therizinosauridae:entities/land/therizinosauridae",
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": {
+      "code": "CombatOverhaul:EntityColliders",
+      "elements": {
+        "Torso": ["Neck","Neck2","Neck3", "Torso", "Body", "Body Back", "Tail", "Tail2","Tail3"],
+        "Head": ["Head","Head2","Head3","Head4","Head5","Head6","Head8","Head9","Head10","Head12", "Jaw","Jaw2","Jaw Line","Lower Jaw","Lower Jaw2", "Nose", "Slope","Beak","Beak3"],
+        "Arm": ["ArmR","ArmL","ArmR2","ArmL2"],
+        "Leg": ["LegL","LegR","LegL2","LegR2","LegL3","LegR3"],
+        "Critical": ["EyeL", "EyeR","Heart","Brain","Lungs"],
+      },
+      "defaultPenetrationResistance": 3,
+    }
+  },
+  {
+    "side": "Server",
+    "dependsOn": [{ "modid": "combatoverhaul" }],
+    "file": "therizinosauridae:entities/land/therizinosauridae",
+    "op": "add",
+    "path": "/server/behaviors/-",
+    "value": {
+      "code": "CombatOverhaul:EntityDamageModel",
+      "damageModel": {
+        "TorsoDamageMultiplier": 1,
+        "LimbsDamageMultiplier": 0.75,
+        "HeadDamageMultiplier": 3,
+        "CriticalDamageMultiplier": 5,
+        "DefaultResists": {"BluntAttack": 3, "SlashingAttack": 3, "PiercingAttack": 0}
+      }
+    }
+  },
+  {
+    "side": "Server",
+    "dependsOn": [{ "modid": "combatoverhaul" }],
+    "file": "therizinosauridae:entities/land/therizinosauridae",
+    "op": "add",
+    "path": "/client/behaviors/-",
+    "value": {
+      "code": "CombatOverhaul:EntityDamageModel",
+      "damageModel": {
+        "TorsoDamageMultiplier": 1,
+        "LimbsDamageMultiplier": 0.75,
+        "HeadDamageMultiplier": 3,
+        "CriticalDamageMultiplier": 5,
+        "DefaultResists": {"BluntAttack": 3, "SlashingAttack": 3, "PiercingAttack": 0}
+      }
+    }
+  }
+]

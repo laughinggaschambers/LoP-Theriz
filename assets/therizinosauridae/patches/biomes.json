@@ -1,0 +1,156 @@
+[
+  {
+    "file": "therizinosauridae:entities/land/therizinosauridae.json",
+    "op": "addmerge",
+    "path": "/attributesByType",
+    "side": "Server",
+    "value": {
+        "*-therizinosaurus-*": {
+          "biorealm": [
+            "eastern palearctic",
+          ]
+        },
+
+        "*-segnosaurus-*": {
+          "biorealm": [
+            "eastern palearctic",
+          ]
+        },
+
+        "*-suzhousaurus-*": {
+          "biorealm": [
+            "eastern palearctic",
+          ]
+        },
+
+        "*-nothronychus-*": {
+          "biorealm": [
+            "pacific nearctic",
+            "atlantic nearctic",
+          ]
+        },
+
+        "*-alxasaurus-*": {
+          "biorealm": [
+            "eastern palearctic",
+          ]
+        },
+
+        "*-falcarius-*": {
+          "biorealm": [
+            "pacific nearctic",
+            "atlantic nearctic",
+          ]
+        },
+
+        "*-erliansaurus-*": {
+          "biorealm": [
+            "eastern palearctic",
+          ]
+        },
+
+        "*-jianchangosaurus-*": {
+          "biorealm": [
+            "eastern palearctic",
+          ]
+        },
+
+        "*-beipiaosaurus-*": {
+          "biorealm": [
+            "eastern palearctic",
+          ]
+        },
+
+        "*-neimongosaurus-*": {
+          "biorealm": [
+            "central palearctic",
+            "eastern palearctic",
+          ]
+        },
+
+
+    },
+    "dependsOn": [
+      {
+        "modid": "biomes"
+      }
+    ]
+  },
+  {
+    "file": "therizinosauridae:entities/land/nest.json",
+    "op": "addmerge",
+    "path": "/attributesByType",
+    "side": "Server",
+    "value": {
+        "*-therizinosaurus-*": {
+          "biorealm": [
+            "eastern palearctic",
+          ]
+        },
+
+        "*-segnosaurus-*": {
+          "biorealm": [
+            "eastern palearctic",
+          ]
+        },
+
+        "*-suzhousaurus-*": {
+          "biorealm": [
+            "eastern palearctic",
+          ]
+        },
+
+        "*-nothronychus-*": {
+          "biorealm": [
+            "pacific nearctic",
+            "atlantic nearctic",
+          ]
+        },
+
+        "*-alxasaurus-*": {
+          "biorealm": [
+            "eastern palearctic",
+          ]
+        },
+
+        "*-falcarius-*": {
+          "biorealm": [
+            "pacific nearctic",
+            "atlantic nearctic",
+          ]
+        },
+
+        "*-erliansaurus-*": {
+          "biorealm": [
+            "eastern palearctic",
+          ]
+        },
+
+        "*-jianchangosaurus-*": {
+          "biorealm": [
+            "eastern palearctic",
+          ]
+        },
+
+        "*-beipiaosaurus-*": {
+          "biorealm": [
+            "eastern palearctic",
+          ]
+        },
+
+        "*-neimongosaurus-*": {
+          "biorealm": [
+            "central palearctic",
+            "eastern palearctic",
+          ]
+        },
+
+
+    },
+    "dependsOn": [
+      {
+        "modid": "biomes"
+      }
+    ]
+  },
+]

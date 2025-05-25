@@ -1,0 +1,88 @@
+﻿{
+  "code": "creature",
+  "class": "ItemCreature",
+  "maxstacksize": 64,
+  "variantgroups": [
+    {
+      "code": "type",
+      "states": [ 
+	    "therizinosauridae-therizinosaurus-adult-male","therizinosauridae-therizinosaurus-adult-female", "therizinosauridae-therizinosaurus-baby-male", "therizinosauridae-therizinosaurus-baby-female","therizinosauridae-therizinosaurus-nest-empty","therizinosauridae-therizinosaurus-nest-incubating","therizinosauridae-therizinosaurus-nest-mature",
+		"therizinosauridae-segnosaurus-adult-male","therizinosauridae-segnosaurus-adult-female", "therizinosauridae-segnosaurus-baby-male", "therizinosauridae-segnosaurus-baby-female","therizinosauridae-segnosaurus-nest-empty","therizinosauridae-segnosaurus-nest-incubating","therizinosauridae-segnosaurus-nest-mature",
+		"therizinosauridae-suzhousaurus-adult-male","therizinosauridae-suzhousaurus-adult-female", "therizinosauridae-suzhousaurus-baby-male", "therizinosauridae-suzhousaurus-baby-female","therizinosauridae-suzhousaurus-nest-empty","therizinosauridae-suzhousaurus-nest-incubating","therizinosauridae-suzhousaurus-nest-mature",
+		"therizinosauridae-nothronychus-adult-male","therizinosauridae-nothronychus-adult-female", "therizinosauridae-nothronychus-baby-male", "therizinosauridae-nothronychus-baby-female","therizinosauridae-nothronychus-nest-empty","therizinosauridae-nothronychus-nest-incubating","therizinosauridae-nothronychus-nest-mature",
+		"therizinosauridae-alxasaurus-adult-male","therizinosauridae-alxasaurus-adult-female", "therizinosauridae-alxasaurus-baby-male", "therizinosauridae-alxasaurus-baby-female","therizinosauridae-alxasaurus-nest-empty","therizinosauridae-alxasaurus-nest-incubating","therizinosauridae-alxasaurus-nest-mature",
+		"therizinosauridae-falcarius-adult-male","therizinosauridae-falcarius-adult-female", "therizinosauridae-falcarius-baby-male", "therizinosauridae-falcarius-baby-female","therizinosauridae-falcarius-nest-empty","therizinosauridae-falcarius-nest-incubating","therizinosauridae-falcarius-nest-mature",
+		"therizinosauridae-erliansaurus-adult-male","therizinosauridae-erliansaurus-adult-female", "therizinosauridae-erliansaurus-baby-male", "therizinosauridae-erliansaurus-baby-female","therizinosauridae-erliansaurus-nest-empty","therizinosauridae-erliansaurus-nest-incubating","therizinosauridae-erliansaurus-nest-mature",
+		"therizinosauridae-jianchangosaurus-adult-male","therizinosauridae-jianchangosaurus-adult-female", "therizinosauridae-jianchangosaurus-baby-male", "therizinosauridae-jianchangosaurus-baby-female","therizinosauridae-jianchangosaurus-nest-empty","therizinosauridae-jianchangosaurus-nest-incubating","therizinosauridae-jianchangosaurus-nest-mature",
+		"therizinosauridae-beipiaosaurus-adult-male","therizinosauridae-beipiaosaurus-adult-female", "therizinosauridae-beipiaosaurus-baby-male", "therizinosauridae-beipiaosaurus-baby-female","therizinosauridae-beipiaosaurus-nest-empty","therizinosauridae-beipiaosaurus-nest-incubating","therizinosauridae-beipiaosaurus-nest-mature",
+		"therizinosauridae-neimongosaurus-adult-male","therizinosauridae-neimongosaurus-adult-female", "therizinosauridae-neimongosaurus-baby-male", "therizinosauridae-neimongosaurus-baby-female","therizinosauridae-neimongosaurus-nest-empty","therizinosauridae-neimongosaurus-nest-incubating","therizinosauridae-neimongosaurus-nest-mature",
+
+
+	  ]
+    }
+  ],
+  "shapeByType": {
+	"*-therizinosaurus-adult-*": {"base": "entity/land/therizinosauridae/therizinosaurus/adult"}, "*-therizinosaurus-baby-*": {"base": "entity/land/therizinosauridae/therizinosaurus/baby"},
+	"*-segnosaurus-adult-*": {"base": "entity/land/therizinosauridae/segnosaurus/adult"}, "*-segnosaurus-baby-*": {"base": "entity/land/therizinosauridae/segnosaurus/baby"},
+	"*-suzhousaurus-adult-*": {"base": "entity/land/therizinosauridae/suzhousaurus/adult"}, "*-suzhousaurus-baby-*": {"base": "entity/land/therizinosauridae/suzhousaurus/baby"},
+	"*-nothronychus-adult-*": {"base": "entity/land/therizinosauridae/nothronychus/adult"}, "*-nothronychus-baby-*": {"base": "entity/land/therizinosauridae/nothronychus/baby"},
+	"*-alxasaurus-adult-*": {"base": "entity/land/therizinosauridae/alxasaurus/adult"}, "*-alxasaurus-baby-*": {"base": "entity/land/therizinosauridae/alxasaurus/baby"},
+	"*-falcarius-adult-*": {"base": "entity/land/therizinosauridae/falcarius/adult"}, "*-falcarius-baby-*": {"base": "entity/land/therizinosauridae/falcarius/baby"},
+	"*-erliansaurus-adult-*": {"base": "entity/land/therizinosauridae/erliansaurus/adult"}, "*-erliansaurus-baby-*": {"base": "entity/land/therizinosauridae/erliansaurus/baby"},
+	"*-jianchangosaurus-adult-*": {"base": "entity/land/therizinosauridae/jianchangosaurus/adult"}, "*-jianchangosaurus-baby-*": {"base": "entity/land/therizinosauridae/jianchangosaurus/baby"},
+	"*-beipiaosaurus-adult-*": {"base": "entity/land/therizinosauridae/beipiaosaurus/adult"}, "*-beipiaosaurus-baby-*": {"base": "entity/land/therizinosauridae/beipiaosaurus/baby"},
+	"*-neimongosaurus-adult-*": {"base": "entity/land/therizinosauridae/neimongosaurus/adult"}, "*-neimongosaurus-baby-*": {"base": "entity/land/therizinosauridae/neimongosaurus/baby"},
+	"*-nest-*":{"base": "entity/land/nest"}, "*-nest-empty":{"base": "entity/land/nest-empty"},
+  },
+  "textureByType": {
+	"*-therizinosaurus-adult-*":{"base": "entity/therizinosaurus-adult"},"*-therizinosaurus-baby-*":{"base": "entity/therizinosaurus-adult"},
+	"*-segnosaurus-adult-*":{"base": "entity/segnosaurus-adult"},"*-segnosaurus-baby-*":{"base": "entity/segnosaurus-adult"},
+	"*-suzhousaurus-adult-*":{"base": "entity/suzhousaurus-adult"},"*-suzhousaurus-baby-*":{"base": "entity/suzhousaurus-adult"},
+	"*-nothronychus-adult-*":{"base": "entity/nothronychus-adult"},"*-nothronychus-baby-*":{"base": "entity/nothronychus-adult"},
+	"*-alxasaurus-adult-*":{"base": "entity/alxasaurus-adult"},"*-alxasaurus-baby-*":{"base": "entity/alxasaurus-adult"},
+	"*-falcarius-adult-*":{"base": "entity/falcarius-adult"},"*-falcarius-baby-*":{"base": "entity/falcarius-adult"},
+	"*-erliansaurus-adult-*":{"base": "entity/erliansaurus-adult"},"*-erliansaurus-baby-*":{"base": "entity/erliansaurus-adult"},
+	"*-jianchangosaurus-adult-*":{"base": "entity/jianchangosaurus-adult"},"*-jianchangosaurus-baby-*":{"base": "entity/jianchangosaurus-adult"},
+	"*-beipiaosaurus-adult-*":{"base": "entity/beipiaosaurus-adult"},"*-beipiaosaurus-baby-*":{"base": "entity/beipiaosaurus-adult"},
+	"*-neimongosaurus-adult-*":{"base": "entity/neimongosaurus-adult"},"*-neimongosaurus-baby-*":{"base": "entity/neimongosaurus-adult"},
+ },
+  "creativeinventory": { "general": ["*"], "items": ["*"], "creatures": ["*"] },
+	"materialDensity": 600,
+	"guiTransformByType": {
+		"*-baby-*": {
+			"rotate": true,
+			"translation": { "x": -20, "y": -15, "z": 0 },
+			"rotation": { "x": -11, "y": -52, "z": -180 },
+			"origin": { "x": 1.5, "y": 1.5, "z": 1.5 },
+			"scale": 0.7
+		},
+		"creature-therizinosauridae-*": {
+			"rotate": true,
+			"translation": { "x": -25, "y": -5, "z": -5 },
+			"rotation": { "x": -11, "y": -52, "z": -180 },
+			"origin": { "x": 1.5, "y": 1.5, "z": 1.5 },
+			"scale": 0.5
+		},
+	},
+
+	"tpHandTransformByType": {
+		"*-baby-*": {
+			"translation": { "x": -0.3, "y": -0.4, "z": -0.4 },
+			"rotation": { "x": 13, "y": -166, "z": 75 },
+			"origin": { "x": 0, "y": 0, "z": 0 },
+			"scale": 0.25
+		},
+		"creature-therizinosauridae-*": {
+			"translation": { "x": -2, "y": -2.7, "z": -1.7 },
+			"rotation": { "x": 2, "y": -180, "z": 23 },
+			"scale": 0.2
+		},
+	},
+
+	"fpHandTransformByType": {
+		"creature-therizinosauridae-*": {
+			"translation": { "x": 0.2, "y": 0, "z": 0 },
+			"rotation": { "x": -8, "y": -63, "z": -7 }
+		}
+	}
+}

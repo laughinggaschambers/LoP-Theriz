@@ -1,0 +1,47 @@
+[
+	{
+		ingredientPattern: "LNP,PLL,SMH",
+		ingredients: {
+			"S": { type: "item", code: "game:saw-*", isTool: true  },
+			"H": { type: "item", code: "game:hammer-*", isTool: true  },
+			"P": { type: "item", code: "game:plank-*", name: "wood" },
+			"M": { type: "item", code: "game:metalplate-iron", name: "iron" },
+			"L": { type: "item", code: "game:leather-sturdy-*", name: "leather"},
+			"N": { type: "item", code: "game:metalnailsandstrips-iron", name: "nail", quantity:2},
+		},
+		name: "tyrannosaddle",
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "therizinosauridae:therizwearable-saddle", "quantity": 1 }
+	},
+	{
+		ingredientPattern: "NLL,SLH,_M_",
+		ingredients: {
+			"S": { type: "item", code: "game:saw-*", isTool: true  },
+			"H": { type: "item", code: "game:hammer-*", isTool: true  },
+			"P": { type: "item", code: "game:plank-*", name: "wood" },
+			"M": { type: "item", code: "game:metalplate-iron", name: "iron" },
+			"L": { type: "item", code: "game:leather-sturdy-*", name: "leather" },
+			"N": { type: "item", code: "game:metalnailsandstrips-iron", name: "nail", quantity:2},
+		},
+		name: "tyrannobridle",
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "therizinosauridae:therizwearable-bridle1", "quantity": 1 }
+	},
+	{
+		ingredientPattern: "LLN,SLH,_M_",
+		ingredients: {
+			"S": { type: "item", code: "game:saw-*", isTool: true  },
+			"H": { type: "item", code: "game:hammer-*", isTool: true  },
+			"P": { type: "item", code: "game:plank-*", name: "wood" },
+			"M": { type: "item", code: "game:metalplate-iron", name: "iron" },
+			"L": { type: "item", code: "game:leather-sturdy-*", name: "leather" },
+			"N": { type: "item", code: "game:metalnailsandstrips-iron", name: "nail", quantity:2},
+		},
+		name: "tyrannobridle",
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "therizinosauridae:therizwearable-bridle2", "quantity": 1 }
+	},
+]

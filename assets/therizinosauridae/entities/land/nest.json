@@ -1,0 +1,329 @@
+{
+	"code": "therizinosauridae",
+	"class": "EntityAgent",
+	"variantgroups": [
+		{"code": "type","states": ["therizinosaurus", "segnosaurus", "suzhousaurus", "nothronychus", "alxasaurus", "falcarius", "erliansaurus", "jianchangosaurus", "beipiaosaurus", "neimongosaurus"]},
+		{ "code": "age", "states": ["nest"] },
+		{ "code": "state", "states": ["incubating","mature","empty"] }
+	],
+	"selectionBoxSizeByType": {
+		"*": {"x": 1,"y": 0.5}
+	},
+	"collisionBoxSizeByType": {
+		"*": {"x": 1,"y": 0.5}
+	},
+	"deadSelectionBoxSizeByType": {
+		"*": {"x": 1,"y": 0.5}
+	},
+	"knockbackResistanceByType": {
+		"*": 10.0
+	},
+	"eyeHeight": 0.6,
+	"weightByType": {
+		"*": 100
+	},
+	"drops": [],
+	"attributes": {
+	},
+	"client": {
+		"renderer": "Shape",
+		"shapeByType": {
+			"*-nest-empty": { "base": "entity/land/nest-empty" },
+            "*": { "base": "entity/land/nest" },
+
+		},
+		"sizeByType": {
+			"*": 1
+		},
+		"behaviors": [
+			{
+				"code": "controlledphysics",
+				"stepHeight": 0
+			},
+			{ "code": "interpolateposition" },
+			{"code": "despawn","minPlayerDistance": 8,"belowLightLevel": 8,"minSeconds": 300},
+			{
+				"code": "floatupwhenstuck",
+				"onlyWhenDead": true
+			},
+			{ "code": "harvestable" }
+
+		],
+		"animations": [
+			{"code": "die","animation": "Die","animationSpeed": 2.00,"weight": 10,"blendMode": "Average","triggeredBy": { "onControls": [ "dead" ] }},
+			{"code": "idle","animation": "Idle","blendMode": "AddAverage","easeOutSpeed": 4,"triggeredBy": { "defaultAnim": true }},
+			{"code": "sleep","animation": "Sleep","easeInSpeed": 4,"easeOutSpeed": 4,"blendMode": "Average"}
+		]
+	},
+	"server": {
+		"attributes": {
+		},
+		"behaviors": [
+			{
+				"code": "controlledphysics",
+				"stepHeight": 0
+			},
+			{"code": "despawn","minPlayerDistance": 8,"belowLightLevel": 8,"minSeconds": 300},
+			{
+				"code": "health",
+				"maxhealthByType": {
+					"*": 20
+				}
+			},
+			{
+				"code": "deaddecay",
+				"hoursToDecay": 24
+			},
+			{
+				"code": "floatupwhenstuck",
+				"onlyWhenDead": true
+			},
+			{
+				"code": "harvestable",
+				"drops": [
+					{
+						"type": "item",
+						"code": "game:stick",
+						"quantityByType": {
+							"*": {"avg": 6,"var": 4}
+						}
+					},
+					{
+						"type": "item",
+						"code": "therizinosauridae:creature-therizinosauridae-{type}-egg-raw",
+						"quantityByType": {
+							"*-incubating": {"avg": 10,"var": 20, "dist":"gaussian"},
+							"*":{"avg": 0,"var": 0}
+						}
+					},
+				]
+			},
+			{
+				"code": "grow",
+				"enabledByType": {
+					"*-empty": false,
+					"*": true
+				},
+				"hoursToGrowByType": {"*-incubating": 140,"*-mature": 2},
+				"adultEntityCodesByType": {
+					"*-incubating": ["therizinosauridae:therizinosauridae-{type}-nest-mature"],
+					"*-mature": ["therizinosauridae:therizinosauridae-{type}-nest-empty"]
+				}
+			},
+			{"code": "emotionstates","states": []},
+			{
+				"code": "taskai",
+				"aitasks": [
+					{
+						"code": "bellalarm",
+						"animation": "Idle",
+						"enabledByType": {"*-mature": true,"*": false},
+						"onNearbyEntityCodes": ["player"],
+						"spawnMobs": [
+							"therizinosauridae:therizinosauridae-{type}-baby-female",
+							"therizinosauridae:therizinosauridae-{type}-baby-male"
+						],
+						"spawnMaxQuantity": 5,
+						"spawnIntervalMsMin": 1000,
+						"spawnIntervalMsMax": 4000,
+						"spawnRange": 0.5,
+						"seekingRange": 100,
+						"priority": 1.9,
+						"minduration": 2000,
+						"maxduration": 8000,
+						"mincooldown": 6000,
+						"maxcooldown": 12000,
+						"animationSpeed": 2.0
+					},
+					{
+						"code": "idle",
+						"animation": "Idle",
+						"priority": 0.5,
+						"minduration": 180000,
+						"maxduration": 240000,
+						"mincooldown": 3000,
+						"maxcooldown": 3000
+					},
+				]
+			}
+
+		],
+	},
+	"spawnconditions": {
+		"worldgen": {
+			"chanceByType": {"*-empty": 0.0},
+			"triesPerChunkByType": {"*-incubating":{ "avg": 0.001, "var": 0}},
+			"maxQuantityByGroup": { "code": "therizinosauridae-*", "maxQuantity": 1 },
+			"tryOnlySurface": true,
+			"insideBlockCodes": [
+				"game:air",
+				"game:tallgrass-*",
+				"game:gravel-*",
+				"game:sand-*",
+				"game:snowlayer-1",
+				"game:soil-*"
+			],
+			"groupSizeByType": {
+				"*": { "dist": "uniform", "avg": 1.5, "var": 0 }
+			},
+			"*":["therizinosauridae:therizinosauridae-{type}-adult-female","therizinosauridae:therizinosauridae-{type}-adult-male"]},
+
+		"runtime": {
+			"group": "neutral",
+			"tryOnlySurface": true,
+			"maxQuantityByGroup": {"code": "therizinosauridae-*",	"maxQuantity": 1},
+			"chanceByType": {"*-incubating": 0.00001,"*": 0.0},
+			"TriesPerChunk": { "avg": 0.0, "var": 0 },
+			"mindistancetoplayer": 50,
+			"maxLightLevel": 7,
+			"lightLevelType": "onlyBlockLight",
+			"spawnCapPlayerScaling": 0.0,
+			"groupSizeByType": {
+				"*": { "dist": "uniform", "avg": 2, "var": 0 }
+			},
+			"insideBlockCodes": [
+				"game:air",
+				"game:tallgrass-*",
+				"game:gravel-*",
+				"game:sand-*",
+				"game:snowlayer-1",
+				"game:soil-*"
+			],
+			"companionsByType": {
+			"*":["therizinosauridae:therizinosauridae-{type}-adult-female","therizinosauridae:therizinosauridae-{type}-adult-male"]}
+		},
+    },
+	"spawnconditionsByType": {
+        "*-therizinosaurus-nest-incubating": {
+                    "climate": {
+                        "minTemp": 15,
+                        "maxTemp": 35,
+                        "minRain": 0.4,
+                        "maxRain": 1,
+                        "minForestOrShrubs": 0.3,
+                        "maxForest": 1,
+                        "maxShrubs": 1,
+                        "minY": 0.9,
+                        "maxY": 1.5
+                    },
+                },
+        "*-segnosaurus-nest-incubating": {
+                        "climate": {
+                            "minTemp": 15,
+                            "maxTemp": 33,
+                            "minRain": 0.3,
+                            "maxRain": 0.9,
+                            "minForestOrShrubs": 0.2,
+                            "maxForest": 0.8,
+                            "maxShrubs": 1,
+                            "minY": 0.9,
+                            "maxY": 1.4
+                        },
+                    },
+        "*-suzhousaurus-nest-incubating": {
+                        "climate": {
+                            "minTemp": 10,
+                            "maxTemp": 30,
+                            "minRain": 0.2,
+                            "maxRain": 0.8,
+                            "minForestOrShrubs": 0.2,
+                            "maxForest": 0.9,
+                            "maxShrubs": 1,
+                            "minY": 0.9,
+                            "maxY": 1.4
+                        },
+                    },
+        "*-nothronychus-nest-incubating": {
+                        "climate": {
+                            "minTemp": 20,
+                            "maxTemp": 38,
+                            "minRain": 0.1,
+                            "maxRain": 0.6,
+                            "minForestOrShrubs": 0.1,
+                            "maxForest": 0.6,
+                            "maxShrubs": 1,
+                            "minY": 0.9,
+                            "maxY": 1.3
+                        },
+                    },
+        "*-alxasaurus-nest-incubating": {
+                        "climate": {
+                            "minTemp": 12,
+                            "maxTemp": 32,
+                            "minRain": 0.2,
+                            "maxRain": 0.8,
+                            "minForestOrShrubs": 0.2,
+                            "maxForest": 0.9,
+                            "maxShrubs": 1,
+                            "minY": 0.9,
+                            "maxY": 1.5
+                        },
+                    },
+        "*-falcarius-nest-incubating": {
+                        "climate": {
+                            "minTemp": 18,
+                            "maxTemp": 35,
+                            "minRain": 0.1,
+                            "maxRain": 0.5,
+                            "minForestOrShrubs": 0.1,
+                            "maxForest": 0.5,
+                            "maxShrubs": 0.9,
+                            "minY": 0.9,
+                            "maxY": 1.4
+                        },
+                    },
+        "*-erliansaurus-nest-incubating": {
+                        "climate": {
+                            "minTemp": 15,
+                            "maxTemp": 33,
+                            "minRain": 0.3,
+                            "maxRain": 0.9,
+                            "minForestOrShrubs": 0.3,
+                            "maxForest": 0.9,
+                            "maxShrubs": 1,
+                            "minY": 0.9,
+                            "maxY": 1.5
+                        },
+                    },
+        "*-jianchangosaurus-nest-incubating": {
+                        "climate": {
+                            "minTemp": 12,
+                            "maxTemp": 28,
+                            "minRain": 0.4,
+                            "maxRain": 1,
+                            "minForestOrShrubs": 0.4,
+                            "maxForest": 1,
+                            "maxShrubs": 1,
+                            "minY": 0.9,
+                            "maxY": 1.6
+                        },
+                    },
+        "*-beipiaosaurus-nest-incubating": {
+                        "climate": {
+                            "minTemp": 12,
+                            "maxTemp": 28,
+                            "minRain": 0.4,
+                            "maxRain": 1,
+                            "minForestOrShrubs": 0.4,
+                            "maxForest": 1,
+                            "maxShrubs": 1,
+                            "minY": 0.9,
+                            "maxY": 1.6
+                        },
+                    },
+        "*-neimongosaurus-nest-incubating": {
+                        "climate": {
+                            "minTemp": 14,
+                            "maxTemp": 30,
+                            "minRain": 0.3,
+                            "maxRain": 0.8,
+                            "minForestOrShrubs": 0.3,
+                            "maxForest": 0.8,
+                            "maxShrubs": 1,
+                            "minY": 0.9,
+                            "maxY": 1.4
+                        },
+                    },
+	}
+
+}
