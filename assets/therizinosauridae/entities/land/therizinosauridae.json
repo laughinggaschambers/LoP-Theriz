@@ -333,6 +333,9 @@
 		},
 
         "behaviors": [
+			{"code": "ownable", "enabledByType": { "*-baby-*": false,"*-falcarius-*": false,"*-erliansaurus-*": false,"*-jianchangosaurus-*": false,"*-beipiaosaurus-*": false,"*-neimongosaurus-*": false,"*": true},"minGeneration": 3 },
+			{"code": "selectionboxes", "enabledByType": {  "*-baby-*": false,"*-falcarius-*": false,"*-erliansaurus-*": false,"*-jianchangosaurus-*": false,"*-beipiaosaurus-*": false,"*-neimongosaurus-*": false, "*": true},"minGeneration": 3 },
+			{"code": "rideableaccessories", "enabledByType": {  "*-baby-*": false,"*-falcarius-*": false,"*-erliansaurus-*": false,"*-jianchangosaurus-*": false,"*-beipiaosaurus-*": false,"*-neimongosaurus-*": false,"*": true},"minGeneration": 3 },
 			{"code": "rideable", "enabledByType": {  "*-baby-*": false,"*-falcarius-*": false,"*-erliansaurus-*": false,"*-jianchangosaurus-*": false,"*-beipiaosaurus-*": false,"*-neimongosaurus-*": false,"*": true},"minGeneration": 3 },
             {"code": "repulseagents" },
 			{"code": "controlledphysics","stepHeight": 1.1251},
@@ -342,9 +345,6 @@
 			{"code": "multiply", "enabledByType": { "*-adult-female": true, "*": false } },
 			{"code": "despawn","minPlayerDistance": 8,"belowLightLevel": 8,"minSeconds": 300},
 			{"code": "ropetieable","minGeneration": 2},
-			{"code": "selectionboxes", "enabledByType": {  "*-baby-*": false,"*-falcarius-*": false,"*-erliansaurus-*": false,"*-jianchangosaurus-*": false,"*-beipiaosaurus-*": false,"*-neimongosaurus-*": false, "*": true},"minGeneration": 3 },
-			{"code": "ownable", "enabledByType": { "*-baby-*": false,"*-falcarius-*": false,"*-erliansaurus-*": false,"*-jianchangosaurus-*": false,"*-beipiaosaurus-*": false,"*-neimongosaurus-*": false,"*": true},"minGeneration": 3 },
-			{"code": "rideableaccessories", "enabledByType": {  "*-baby-*": false,"*-falcarius-*": false,"*-erliansaurus-*": false,"*-jianchangosaurus-*": false,"*-beipiaosaurus-*": false,"*-neimongosaurus-*": false,"*": true},"minGeneration": 3 },
         ],
         "animations": [
 			{"code": "attack","animation": "Attack","animationSpeed": 1.2,"weight": 10,"blendMode": "AddAverage"},
@@ -366,10 +366,10 @@
     "server": {
 		"attributes": {"pathfinder": {"minTurnAnglePerSec": 60,"maxTurnAnglePerSec": 120}},
         "behaviors": [
-			{"code": "rideable", "enabledByType": {  "*-baby-*": false,"*-falcarius-*": false,"*-erliansaurus-*": false,"*-jianchangosaurus-*": false,"*-beipiaosaurus-*": false,"*-neimongosaurus-*": false,"*": true},"minGeneration": 3 },
-			{"code": "selectionboxes", "enabledByType": {  "*-baby-*": false,"*-falcarius-*": false,"*-erliansaurus-*": false,"*-jianchangosaurus-*": false,"*-beipiaosaurus-*": false,"*-neimongosaurus-*": false,"*": true},"minGeneration": 3 },
 			{"code": "ownable", "enabledByType": { "*-baby-*": false,"*-falcarius-*": false,"*-erliansaurus-*": false,"*-jianchangosaurus-*": false,"*-beipiaosaurus-*": false,"*-neimongosaurus-*": false,"*": true},"minGeneration": 3 },
+			{"code": "selectionboxes", "enabledByType": {  "*-baby-*": false,"*-falcarius-*": false,"*-erliansaurus-*": false,"*-jianchangosaurus-*": false,"*-beipiaosaurus-*": false,"*-neimongosaurus-*": false,"*": true},"minGeneration": 3 },
 			{"code": "rideableaccessories", "enabledByType": {  "*-baby-*": false,"*-falcarius-*": false,"*-erliansaurus-*": false,"*-jianchangosaurus-*": false,"*-beipiaosaurus-*": false,"*-neimongosaurus-*": false,"*": true},"minGeneration": 3 },
+			{"code": "rideable", "enabledByType": {  "*-baby-*": false,"*-falcarius-*": false,"*-erliansaurus-*": false,"*-jianchangosaurus-*": false,"*-beipiaosaurus-*": false,"*-neimongosaurus-*": false,"*": true},"minGeneration": 3 },
             {"code": "repulseagents" },
             {"code": "controlledphysics","stepHeight": 1.1251},
             {"code": "despawn","minPlayerDistance": 8,"belowLightLevel": 8,"minSeconds": 300},
@@ -1164,7 +1164,7 @@
 				]
             },
 			{"code": "pettable","minGeneration": 3},
-			{"code": "ropetieable","minGeneration": 3},
+			{"code": "ropetieable","minGeneration": 2},
 
         ],
 	"spawnconditions": {
